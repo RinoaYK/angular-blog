@@ -1,0 +1,13 @@
+.menu-title {
+	color: #b1b1b1;
+}
+
+.menu-title >h1 {
+	font-size: 7.5vw;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: center;
+	font-family: 'Brush Script MT', sans-serif;
+}
+
