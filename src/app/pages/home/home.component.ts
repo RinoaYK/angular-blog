@@ -13,16 +13,25 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
-  bigCardArticle: any;
-  smallCardArticle: any;
+	bigCardArticle: any;
+  smallCardArticles: any[] = [];
 
-  ngOnInit(): void {
-    this.bigCardArticle = this.getRandomArticle();
-    this.smallCardArticle = this.getRandomArticle(this.bigCardArticle?.id);
+	ngOnInit(): void {
+    this.bigCardArticle = this.getRandomArticle("github");
+    this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id));
+    this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id, ...this.smallCardArticles.map(article => article?.id)));
+    this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id, ...this.smallCardArticles.map(article => article?.id)));
+		console.log(this.bigCardArticle);
+		console.log(this.smallCardArticles);
   }
 
-  getRandomArticle(excludeId?: string): any {
-    const availableArticles = dataFake.filter(article => article.id !== excludeId);
+  getRandomArticle(type?: string, ...excludeIds: string[]): any {
+    let availableArticles = dataFake;
+    if (type) {
+      availableArticles = availableArticles.filter(article => article.type === type);
+    }
+    availableArticles = availableArticles.filter(article => !excludeIds.includes(article.id));
+
     if (availableArticles.length === 0) {
       return null;
     }
