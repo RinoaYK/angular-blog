@@ -1,7 +1,130 @@
-.content__content {
-	border: 3px solid red;
+.container__content {
 	color: white;
-	width: 100%;
-	height: 100vh;
+	width: 100vw;
+	height: 90vh;
 	padding: 1%;
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	padding: 30px;
+}
+.content__image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content__image img {
+	object-fit: contain;
+	height: auto;
+	width: 100%;
+}
+
+.container__content a {
+	background-color: transparent;
+	position: absolute;
+	width: 80px;
+	height: 30px;
+	top: 60px;
+	left: 30px;
+	cursor: pointer;
+	font-size: 15px;
+	color: #868686;
+}
+
+.container__content a:hover {
+	color: #e4e4e4;
+}
+
+.content__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.content__content h1 {
+	margin-bottom: 10px;
+}
+
+.content__content button {
+	background-color: #4e4d4d;
+	color: white;
+	position: static;
+	width: 100%;
+	height: 30px;
+	margin-top: 20px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content__content button:hover {
+	background-color: #7a7a7a;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.content__content button:active {
+	background-color: #363636;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+	color: grey;
+	margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+	.container__content {
+		padding: 1%;
+		flex-direction: column;
+	}
+	.container__content a {
+		top: 35px;
+		left: 45px;
+	}
+	.content__image {
+		margin-top: 15px;
+	}
+	.content__image img {
+		width: 88%;
+	}
+	.content__content {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+@media (max-width: 430px) {
+	.content__content h1 {
+		font-size: 20px;
+	}
+	.description {
+		font-size: 10px;
+	}
+	.container__content {
+		gap: 10px;
+	}
+	.content__content {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.content__content button {
+		height: 30px;
+		font-size: 10px;
+	}
+	.container__content a {
+		top: 39px;
+		left: 20px;
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 320px) {
+	.container__content a {
+		top: 35px;
+		left: 15px;
+		font-size: 10px;
+	}
 }

@@ -21,8 +21,6 @@ export class HomeComponent implements OnInit {
     this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id));
     this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id, ...this.smallCardArticles.map(article => article?.id)));
     this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id, ...this.smallCardArticles.map(article => article?.id)));
-		console.log(this.bigCardArticle);
-		console.log(this.smallCardArticles);
   }
 
   getRandomArticle(type?: string, ...excludeIds: string[]): any {
