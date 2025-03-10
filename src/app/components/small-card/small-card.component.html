@@ -1,16 +1,12 @@
 <div class="container__small-card">
-	<div class="container__small-card-content">
-		<div class="small-card__image">
-			<img src="https://archive.org/download/placeholder-image/placeholder-image.jpg" alt="">
-		</div>
+  <div class="small-card__image">
+    <img [src]="cover" [alt]="alt"> </div>
 
-		<div class="small-card__text">
-			<h1>Saiu nova versão</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales, tellus quis commodo lacinia, ipsum eros ultricies libero, quis congue tellus diam ut nibh.</p>
-		</div>
-	</div>
+  <div class="small-card__title">
+    <h1><a [routerLink]="['content', id]">{{ title }}</a></h1>
+  </div>
 
-	<div class="container__small-card-hr">
-		<hr>
-	</div>
+  <div class="small-card__description">
+    <p><a [routerLink]="['content', id]">{{ description }}</a></p>
+  </div>
 </div>

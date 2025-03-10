@@ -1,12 +1,24 @@
 <app-menu-title></app-menu-title>
 
 <div class="container__articles">
-	<div class="big-card">
-		<app-big-card></app-big-card>
-	</div>
-	<div class="small-card">
-		<app-small-card></app-small-card>
-		<app-small-card></app-small-card>
-		<app-small-card></app-small-card>
-	</div>
+  <div class="big-card">
+    <app-big-card
+      *ngIf="bigCardArticle"
+      [id]="bigCardArticle.id"
+      [title]="bigCardArticle.title"
+      [description]="bigCardArticle.description"
+      [cover]="bigCardArticle.cover"
+      [alt]="bigCardArticle.title"
+    ></app-big-card>
+  </div>
+  <div class="small-card">
+    <app-small-card
+      *ngIf="smallCardArticle"
+      [id]="smallCardArticle.id"
+      [title]="smallCardArticle.title"
+      [description]="smallCardArticle.description"
+      [cover]="smallCardArticle.cover"
+      [alt]="smallCardArticle.title"
+    ></app-small-card>
+  </div>
 </div>
