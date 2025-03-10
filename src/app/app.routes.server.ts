@@ -7,7 +7,7 @@ export const serverRoutes: ServerRoute[] = [
   },
   {
     path: 'content/:id',
-    renderMode: RenderMode.Prerender
+    renderMode: RenderMode.Server
   }
 ];
 
