@@ -1,15 +1,13 @@
-<div class="content__content">
-  <button (click)="goBack()">Voltar</button>
+<div class="container__content">
+	<a (click)="goBack()">🡰 voltar</a>
 
   <div class="content__image">
     <img [src]="cover" alt="{{ alt }}">
   </div>
 
-  <div class="content__title">
+  <div class="content__content">
     <h1>{{ title }}</h1>
-  </div>
-
-  <div class="content__description">
-    <p>{{ description }}</p>
+		<div [innerHTML]="description" class="description"></div>
+		<button (click)="goToLink()">Acesse mais informações</button>
   </div>
 </div>

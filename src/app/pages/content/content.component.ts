@@ -13,6 +13,7 @@ export class ContentComponent implements OnInit {
   description: string = "";
   cover: string = "";
   alt: string = "";
+	link: string = "";
   private id: string | null = "0";
 
 	constructor(private route: ActivatedRoute, private router: Router) { }
@@ -32,9 +33,13 @@ export class ContentComponent implements OnInit {
 
     if (result) {
       this.title = result.title;
-      this.description = result.description;
+			this.description = result.content_desciption
+      	.split('\n')
+      	.map(paragraph => `<p>${paragraph}</p>`)
+      	.join('');
       this.cover = result.cover;
       this.alt = result.title;
+			this.link = result.link;
     } else {
       console.error(`Article with id ${id} not found`);
     }
@@ -42,5 +47,8 @@ export class ContentComponent implements OnInit {
 
   goBack(): void {
     this.router.navigate(['/']);
+  }
+	goToLink(): void {
+    window.open(this.link, '_blank');
   }
 }
