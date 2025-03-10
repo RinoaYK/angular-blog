@@ -11,14 +11,17 @@
       [alt]="bigCardArticle.title"
     ></app-big-card>
   </div>
-  <div class="small-card">
+	<div class="hr-768">
+		<hr>
+	</div>
+	<div class="small-card">
     <app-small-card
-      *ngIf="smallCardArticle"
-      [id]="smallCardArticle.id"
-      [title]="smallCardArticle.title"
-      [description]="smallCardArticle.description"
-      [cover]="smallCardArticle.cover"
-      [alt]="smallCardArticle.title"
+      *ngFor="let article of smallCardArticles"
+      [id]="article.id"
+      [title]="article.title"
+      [description]="article.description"
+      [cover]="article.cover"
+      [alt]="article.title"
     ></app-small-card>
   </div>
 </div>
