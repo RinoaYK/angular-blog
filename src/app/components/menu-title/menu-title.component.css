@@ -2,17 +2,23 @@
 	color: #b1b1b1;
 }
 
-.menu-title >h1 {
-	font-size: 5.5vw;
-	margin-top: 15px;
-	margin-bottom: 15px;
+.menu-title h1 {
+	font-size: 125px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
 	font-family: 'Brush Script MT', sans-serif;
 }
 
-@media (max-width: 522px) {
-	.menu-title >h1 {
-		font-size: 26px;
+@media (max-width: 705px) {
+	.menu-title h1 {
+		font-size: 90px;
+	}
+}
+
+@media (max-width: 525px) {
+	.menu-title h1 {
+		font-size: 50px;
 	}
 }
