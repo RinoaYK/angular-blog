@@ -1,12 +1,13 @@
 #  - Lidia Yamamura - 
 ### Veja o site:
-[**Angular Blog**](https://projeto-intro-web-lidia-yamamura.vercel.app/)
+[**Angular Blog**](https://angular-blog-lidia-yamamura.vercel.app/)
 
 # Decola Tech 2025 - Angular Blog
 
 Este projeto de blog foi desenvolvido durante o programa Decola Tech 2025. Ele apresenta uma seleção de projetos de minha autoria, disponíveis para visualização.
 
 **Destaques:**
+* **Responsividade:** Este projeto foi desenvolvido com uma abordagem "Desktop First", mas está adaptado para outras plataformas.
 * **Seleção Aleatória:** Os projetos exibidos na página inicial são selecionados aleatoriamente.
 * **Projeto em Destaque:** O projeto principal em destaque é sempre proveniente do meu repositório GitHub.
 
