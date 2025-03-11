@@ -14,7 +14,7 @@
 }
 
 .small-card__image {
-  height: 90px;
+  height: 150px;
 }
 
 .small-card__image img {
@@ -35,7 +35,7 @@
 }
 
 .small-card__content h1 {
-  font-size: 13px;
+  font-size: 23px;
   color: grey;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .small-card__content p{
-  font-size: 10px;
+  font-size: 17px;
   color: white;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .small-card__hr {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 @media (max-width: 768px) {
