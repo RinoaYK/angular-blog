@@ -1,13 +1,19 @@
 <div class="container__content">
-	<a (click)="goBack()">< voltar</a>
+	<a (click)="goBack()">
+		< voltar</a>
 
-  <div class="content__image">
-    <img [src]="cover" alt="{{ alt }}">
-  </div>
+			<div class="content__image">
+				<img [src]="cover" alt="{{ alt }}">
+			</div>
 
-  <div class="content__content">
-    <h1>{{ title }}</h1>
-		<div [innerHTML]="description" class="description"></div>
-		<button (click)="goToLink()">Acesse mais informações</button>
-  </div>
+			<div class="content__content">
+				<h1>{{ title }}</h1>
+				<div [innerHTML]="description" class="description"></div>
+
+				<button *ngIf="type === 'diversity'" (click)="goToLink()">Acesse mais informações</button>
+				<div *ngIf="type === 'github'" class="githubButton">
+					<button (click)="goToLink()">Acesse o site</button>
+					<button (click)="goToGitHub()">GitHub do projeto</button>
+				</div>
+			</div>
 </div>
