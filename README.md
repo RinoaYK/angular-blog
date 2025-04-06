@@ -25,7 +25,7 @@ Sinta-se à vontade para explorar os projetos!
   
 ## O layout da página:
 
-![](angular_blog_m.gif)
+![](angular_blog.gif)
 <br>
 
 
