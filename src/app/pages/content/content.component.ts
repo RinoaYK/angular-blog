@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 	selector: 'app-content',
 	imports: [RouterModule, CommonModule],
 	templateUrl: './content.component.html',
-	styleUrl: './content.component.css'
+	styleUrl: './content.component.scss'
 })
 export class ContentComponent implements OnInit {
 	title: string = "";

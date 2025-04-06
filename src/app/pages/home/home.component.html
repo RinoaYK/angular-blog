@@ -1,4 +1,4 @@
-<app-menu-title></app-menu-title>
+<app-title></app-title>
 <div class="container__articles">
   <div class="big-card">
     <app-big-card
@@ -10,7 +10,8 @@
       [alt]="bigCardArticle.title"
     ></app-big-card>
   </div>
-	<div class="small-card">
+
+  <div class="small-card">
     <app-small-card
       *ngFor="let article of smallCardArticles"
       [id]="article.id"

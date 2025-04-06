@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-big-card',
   imports: [RouterModule],
   templateUrl: './big-card.component.html',
-  styleUrl: './big-card.component.css'
+  styleUrl: './big-card.component.scss'
 })
 export class BigCardComponent {
 	@Input()
@@ -18,5 +18,4 @@ export class BigCardComponent {
 	description: string = "";
 	@Input()
 	id: string = "";
-
 }

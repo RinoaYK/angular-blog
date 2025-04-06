@@ -1,0 +1,144 @@
+:host {
+  .container {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    padding-top: 10px;
+    padding-left: 10px;
+
+    background-color: var(--big-card-background-color);
+    background-image: linear-gradient(to left, var(--body) 70%, var(--big-card-background-color) 100%);
+  }
+
+  .container__small-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .small-card__image {
+    height: 138px;
+  }
+
+  .small-card__image img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .small-card__image img:hover {
+    box-shadow: var(--card-box-shadow);
+    transform: scale(0.99);
+    cursor: pointer;
+  }
+
+  .small-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    animation: reveal-left-to-right 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes reveal-left-to-right {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .small-card__content a {
+    text-decoration: none;
+  }
+
+  .small-card__content h1 {
+    font-size: 23px;
+    font-family: "Nanum Myeongjo", serif;
+    color: var(--big-card-p-color);
+  }
+
+  .small-card__content h1:hover {
+    color: var(--text-menu-hover2);
+  }
+
+  .small-card__content p {
+    font-size: 17px;
+    color: var(--big-card-h1-color);
+  }
+
+  .small-card__content p:hover {
+    color: var(--text-menu-hover);
+  }
+
+  .small-card__hr hr {
+    margin-top: 15px;
+    border: 1px solid var(--hr2-color);
+    width: 100%;
+  }
+
+  .small-card__hr {
+    animation: reveal-left-to-right 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+
+  @media (max-width: 1200px) {
+    .container {
+      width: 85vw;
+    }
+
+    .small-card__image {
+      height: 170px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .container {
+      width: 70vw;
+    }
+
+    .container__small-card {
+      flex-direction: column;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .small-card__image img {
+      object-fit: cover;
+    }
+
+    .small-card__image {
+      height: 170px;
+      justify-content: flex-start;
+    }
+
+    .small-card__content p {
+      font-size: 15px;
+    }
+
+    .small-card__content h1 {
+      font-size: 21px;
+    }
+  }
+
+  @media (max-width: 470px) {
+    .small-card__content {
+      width: 80vw;
+    }
+
+    .container {
+      width: 80vw;
+    }
+
+    .container__small-card {
+      align-items: center;
+    }
+  }
+}
