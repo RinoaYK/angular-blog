@@ -24,6 +24,10 @@ html {
     border: none;
     cursor: pointer;
   }
+
+  body {
+    background-image: radial-gradient(circle, var(--body) 90%, var(--big-card-background-color) 100%);
+  }
 }
 
 :root {
