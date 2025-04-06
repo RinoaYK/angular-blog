@@ -17,7 +17,7 @@
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
-
+    animation: fade-in 1s ease-in-out forwards;
     background-color: var(--big-card-background-color);
     background-image: linear-gradient(to left, var(--body) 70%, var(--big-card-background-color) 100%);
   }
@@ -62,16 +62,18 @@
     object-fit: contain;
     height: auto;
     width: 100%;
-    animation: reveal-left-to-right 0.5s ease-in-out forwards;
+    animation: reveal-left-to-right 0.7s ease-in-out forwards;
   }
 
   @keyframes reveal-left-to-right {
     0% {
       clip-path: inset(0 100% 0 0);
+      opacity: 0;
     }
 
     100% {
       clip-path: inset(0 0 0 0);
+      opacity: 1;
     }
   }
 
