@@ -1,0 +1,258 @@
+:host {
+  .container__content {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+    background-color: var(--big-card-background-color);
+    background-image: linear-gradient(to left, var(--body) 70%, var(--big-card-background-color) 100%);
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .voltar {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--big-card-p-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .voltar:hover {
+    color: var(--text-menu-hover);
+    margin-left: 1px;
+  }
+
+  .content__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+  }
+
+  .content__image img {
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+    animation: reveal-left-to-right 0.5s ease-in-out forwards;
+  }
+
+  @keyframes reveal-left-to-right {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  @keyframes reveal-top-to-bottom {
+    0% {
+      clip-path: inset(0 0 100% 0);
+    }
+
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .content__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40vw;
+    padding: 34px;
+    background-color: var(--big-card-background-color);
+    background-image: radial-gradient(circle, var(--body) 50%, var(--big-card-background-color) 100%);
+    animation: fade-in 1s ease-in-out forwards;
+  }
+
+  .content__right h1 {
+    margin-bottom: 10px;
+    font-size: 50px;
+    color: var(--big-card-h1-color);
+    font-family: "Nanum Myeongjo", serif;
+  }
+
+  .githubButton {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content__right button {
+    font-size: 20px;
+    background-color: var(--button--bg-color);
+    color: white;
+    position: static;
+    width: 50%;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    align-self: center;
+  }
+
+  .content__right button:hover {
+    background-color: var(--button--bg-color-hover);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    margin-left: 1px;
+  }
+
+  .content__right button:active {
+    background-color: var(--button--bg-color-active);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .description {
+    color: var(--big-card-p-color);
+    margin-right: 20px;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 2580px) {
+    .container__content {
+      flex-direction: column;
+      width: 65%;
+      max-width: 1200px;
+      margin: 30px auto 40px auto;
+      height: auto;
+    }
+
+    .content__left {
+      width: 100%;
+      padding-left: 20px;
+      padding-bottom: 0px;
+      box-sizing: border-box;
+      animation: fade-in 1s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .content__image {
+      width: 100%;
+    }
+
+    .content__image img {
+      object-fit: contain;
+      height: auto;
+      width: 100%;
+      animation: reveal-top-to-bottom 0.5s ease-in-out forwards;
+      display: block;
+    }
+
+    .content__right {
+      width: 100%;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .content__right h1 {
+      margin-top: 34px;
+      margin-left: 34px;
+    }
+
+    .description {
+      margin-left: 34px;
+    }
+
+    .githubButton {
+      margin-bottom: 34px;
+    }
+
+    .diversityButton {
+      margin-bottom: 34px;
+    }
+  }
+
+  @media (max-width: 1880px) {
+    .description {
+      font-size: 20px;
+    }
+
+    .content__right h1 {
+      font-size: 45px;
+    }
+
+    .content__right button {
+      transform: scale(0.9);
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .description {
+      font-size: 18px;
+    }
+
+    .content__right h1 {
+      font-size: 40px;
+    }
+
+    .content__right button {
+      transform: scale(0.85);
+    }
+  }
+
+  @media (max-width: 820px) {
+    .description {
+      font-size: 16px;
+    }
+
+    .content__right h1 {
+      font-size: 30px;
+    }
+
+    .content__right button {
+      transform: scale(0.8);
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .content__right h1 {
+      font-size: 28px;
+    }
+
+    .content__right button {
+      font-size: 16px;
+      height: 45px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .content__right h1 {
+      font-size: 20px;
+    }
+  }
+}

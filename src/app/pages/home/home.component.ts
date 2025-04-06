@@ -1,26 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuTitleComponent } from '../../components/menu-title/menu-title.component';
 import { BigCardComponent } from '../../components/big-card/big-card.component';
 import { SmallCardComponent } from '../../components/small-card/small-card.component';
 import { dataFake } from '../../../assets/data/dataFake';
 import { CommonModule } from '@angular/common';
+import { TitleComponent } from "../../components/title/title.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MenuTitleComponent, BigCardComponent, SmallCardComponent, CommonModule],
+  imports: [BigCardComponent, SmallCardComponent, CommonModule, TitleComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-	bigCardArticle: any;
+  bigCardArticle: any;
   smallCardArticles: any[] = [];
 
-	ngOnInit(): void {
+  ngOnInit(): void {
     this.bigCardArticle = this.getRandomArticle("github");
     this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id));
-    this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id, ...this.smallCardArticles.map(article => article?.id)));
-    this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id, ...this.smallCardArticles.map(article => article?.id)));
+
+    for (let i = 0; i < 3; i++) {
+      this.smallCardArticles.push(this.getRandomArticle(undefined, this.bigCardArticle?.id, ...this.smallCardArticles.map(article => article?.id)));
+    }
   }
 
   getRandomArticle(type?: string, ...excludeIds: string[]): any {

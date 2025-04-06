@@ -1,0 +1,121 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((color: (theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    ));
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  button {
+    border: none;
+    cursor: pointer;
+  }
+}
+
+:root {
+  @include mat.slide-toggle-overrides((track-outline-color: #A6ADBB,
+      disabled-unselected-track-outline-color: #343746,
+
+      selected-track-outline-color: #E8C37E,
+      selected-focus-track-color: white,
+      selected-hover-track-color: white,
+      selected-icon-color: orange,
+      disabled-selected-icon-color: #FCF0C1,
+      selected-handle-color: #FCF0C1,
+      selected-focus-handle-color: #ffdf5d,
+      selected-focus-state-layer-color: #FCF0C1,
+      selected-track-color: white,
+      selected-hover-state-layer-color:#FCF0C1,
+      selected-pressed-state-layer-color:#FAC705,
+      selected-hover-handle-color:#ffdf5d,
+      selected-pressed-handle-color: #FAC705,
+      selected-pressed-track-color: white,
+
+    ));
+}
+
+:root {
+  --primary-color: #343746;
+  --body: #282a36;
+  --text-menu: #A6ADBB;
+  --text-body: white;
+  --icon-color: #E0E2EC;
+  --background-icon-color: #74777f;
+  --background-icon-color-hover: #44474E;
+  --text-menu-hover: #E8C37E;
+  --text-menu-hover2: orange;
+  --mat-sys-inverse-surface: #A6ADBB;
+  --h1-color: #FFD689;
+  --hr-color: #ae8c02;
+  --hr2-color: #ceb03a;
+  --big-card-h1-color: white;
+  --big-card-p-color: grey;
+  --big-card-background-color:#343746;
+  --card-box-shadow: 4px 5px 20px -4px rgba(252, 240, 193, 0.3);
+  --button--bg-color:#747b88;
+  --button--bg-color-hover: #5b626f;
+  --button--bg-color-active: #383f4d;
+}
+
+:root .light-theme {
+  --primary-color: #ae8c02;
+  --body: white;
+  --text-menu: white;
+  --text-body: #4B4B4B;
+  --icon-color: orange;
+  --background-icon-color: #FCF0C1;
+  --background-icon-color-hover: #ffdf5d;
+  --text-menu-hover: #ae8c02;
+  --text-menu-hover2: rgb(184, 120, 0);
+  --mat-sys-inverse-surface: orange;
+  --h1-color: #ae8c02;
+  --hr-color: #FFD689;
+  --hr2-color: #FFD689;
+  --big-card-h1-color: black;
+  --big-card-p-color: grey;
+  --big-card-background-color: #FCF0C1;
+  --card-box-shadow: 9px 10px 20px -4px rgba(0, 0, 0, 0.30);
+  --button--bg-color:#ae8c02;
+  --button--bg-color-hover: orange;
+  --button--bg-color-active: rgb(177, 115, 0);
+}
+
+body {
+  background-color: var(--body);
+}
+
+.container {
+  width: 510px;
+  margin: 0 auto;
+
+  h1 {
+    font-weight: 700;
+    font-size: 25px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  h1,
+  p {
+    color: var(--text-body);
+  }
+
+
+}

@@ -1,0 +1,145 @@
+:host {
+  header {
+    background-color: var(--primary-color);
+    width: 100vw;
+    height: 70px;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    &,
+    ul {
+      display: flex;
+      flex-direction: row;
+      font-size: 26px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ul {
+      li {
+        margin-left: 30px;
+        list-style: none;
+
+        &,
+        a {
+          color: var(--text-menu);
+          text-decoration: none;
+        }
+      }
+
+      li:hover {
+        a {
+          color: var(--text-menu-hover);
+        }
+      }
+    }
+
+    .header__ul {
+      width: 100%;
+    }
+
+    .header__toggle {
+      margin-right: 30px;
+    }
+
+    .mat-tooltip {
+      background-color: var(--mat-sys-inverse-surface);
+    }
+
+    .header__ul__last button {
+      color: var(--icon-color);
+      background-color: var(--background-icon-color);
+      border-radius: 100px;
+      padding: 3px;
+      position: fixed;
+      right: 20px;
+      top: 21px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header__ul__last button:hover {
+      background-color: var(--background-icon-color-hover);
+    }
+
+    @media (max-width: 770px) {
+      .header__toggle {
+        display: none;
+      }
+
+      .header__ul__last button {
+        display: flex;
+      }
+
+      .header__ul {
+        margin-right: 30px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header__ul ul li {
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 630px) {
+      .header__ul ul li {
+        margin-left: 15px;
+        font-size: 22px;
+      }
+
+      .header__ul__last button {
+        transform: scale(0.9);
+      }
+    }
+
+    @media (max-width: 570px) {
+      .header__ul ul li {
+        margin-left: 12px;
+        font-size: 20px;
+      }
+
+      .header__ul__last button {
+        transform: scale(0.8);
+        right: 15px;
+      }
+    }
+
+    @media (max-width: 495px) {
+      .header__ul ul li {
+        margin-left: 10px;
+        font-size: 18px;
+      }
+
+      .header__ul__last button {
+        transform: scale(0.7);
+      }
+    }
+
+    @media (max-width: 430px) {
+      .header__ul ul li {
+        margin-left: 8px;
+        font-size: 15px;
+      }
+
+      .header__ul__last button {
+        right: 10px;
+      }
+    }
+
+    @media (max-width: 370px) {
+      .header__ul ul li {
+        margin-left: 5px;
+        font-size: 14px;
+      }
+
+      .header__ul__last button {
+        right: 5px;
+      }
+    }
+  }
+}

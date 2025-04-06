@@ -1,0 +1,116 @@
+:host {
+  .container__big-card {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transform: scale(0);
+    opacity: 0;
+    animation: scale-up 1s ease-in-out forwards;
+  }
+
+  @keyframes scale-up {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .big-card__image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .big-card__image img:hover {
+    box-shadow: var(--card-box-shadow);
+    transform: scale(0.99);
+  }
+
+  .big-card__content h1 {
+    color: var(--big-card-h1-color);
+    font-size: 37px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+    font-family: "Nanum Myeongjo", serif;
+  }
+
+  .big-card__content h1:hover {
+    color: var(--text-menu-hover2);
+  }
+
+  .big-card__content a {
+    text-decoration: none;
+  }
+
+  .big-card__content p {
+    color: var(--big-card-p-color);
+    font-size: 20px;
+  }
+
+  .big-card__content p:hover {
+    color: var(--text-menu-hover);
+  }
+
+  .hr-768 {
+    display: none;
+    margin-top: 20px;
+    border: 1px solid var(--hr2-color);
+    width: 100%;
+    animation: expand-horizontally 1s ease-in-out forwards;
+  }
+
+  @keyframes expand-horizontally {
+    0% {
+      transform: scaleX(0);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .container__big-card {
+      flex-direction: row;
+      width: 90vw;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .big-card__image img {
+      object-fit: cover;
+    }
+
+    .hr-768 {
+      display: block;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .container__big-card {
+      flex-direction: column;
+      width: 80vw;
+      margin-top: 30px;
+    }
+
+    .big-card__content {
+      align-items: center;
+    }
+
+    .big-card__image img {
+      object-fit: cover;
+    }
+
+    .hr-768 {
+      margin-top: 30px;
+      display: block;
+    }
+  }
+}

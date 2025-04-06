@@ -1,0 +1,37 @@
+<header>
+  <div class="header__ul">
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/lidia-yamamura-88b606119/" target="_blank">Linkedin</a>
+      </li>
+      <li><span>•</span></li>
+      <li>
+        <a href="https://github.com/RinoaYK/angular-blog" target="_blank">Github</a>
+      </li>
+      <li><span>•</span></li>
+      <li>
+        <a href="https://www.deviantart.com/rinoayk" target="_blank">DeviantArt</a>
+      </li>
+      <li><span>•</span></li>
+      <li>
+        <a href="https://youtu.be/bn5Eq5p3-5g" target="_blank">Youtube</a>
+      </li>
+      <li class="header__ul__last">
+        <button
+        (click)="toggleTheme()"
+        [matTooltip]="getTooltipText()">
+        <i class="material-icons">{{ icon }}</i>
+      </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="header__toggle" >
+    <mat-slide-toggle
+    #modeSwitch
+    [checked]="!isDarkMode"
+    (change)="toggleTheme()"
+    [matTooltip]="getTooltipText()">
+  </mat-slide-toggle>
+  </div>
+</header>

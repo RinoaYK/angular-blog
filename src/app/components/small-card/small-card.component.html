@@ -1,14 +1,24 @@
 <div class="container">
-	<div class="container__small-card">
+  <div class="container__small-card">
 
-  	<div class="small-card__image"><img [src]="cover" [alt]="alt"> </div>
+    <div class="small-card__image">
+      <a [routerLink]="['content', id]">
+        <img [src]="cover" [alt]="alt">
+      </a>
+    </div>
 
-		<div class="small-card__content">
-    	<a [routerLink]="['content', id]"><h1>{{ title }}</h1></a>
-    	<a [routerLink]="['content', id]"><p>{{ description }}</p></a>
-		</div>
+    <div class="small-card__content">
+      <a [routerLink]="['content', id]">
+        <h1>{{ title }}</h1>
+      </a>
+      <a [routerLink]="['content', id]">
+        <p>{{ description }}</p>
+      </a>
+    </div>
 
-	</div>
+  </div>
 
-	<div class="small-card__hr"><hr></div>
+  <div class="small-card__hr">
+    <hr>
+  </div>
 </div>
