@@ -1,4 +1,4 @@
-#  - Lidia Yamamura - 
+  - Lidia Yamamura - 
 ### Veja o site:
 [**Angular Blog**](https://angular-blog-lidia-yamamura.vercel.app/)
 
@@ -24,6 +24,10 @@ Sinta-se à vontade para explorar os projetos!
  - **TypeScript**  
   
 ## O layout da página:
+
+![](angular_blog_m.gif)
+<br>
+
 
 
 ## Iniciar o Projeto
