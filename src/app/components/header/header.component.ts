@@ -6,16 +6,14 @@ import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-header',
-  imports: [
-    MatSlideToggleModule,
-    MatButtonModule,
-    MatTooltipModule
-  ],
+  imports: [MatSlideToggleModule, MatButtonModule, MatTooltipModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss', './header.component_media.scss'],
 })
 export class HeaderComponent implements AfterViewInit {
-  @ViewChild('modeSwitch', { read: ElementRef }) element: ElementRef | undefined;
+  @ViewChild('modeSwitch', { read: ElementRef }) element:
+    | ElementRef
+    | undefined;
 
   public isDarkMode: boolean = true;
   public icon: string = ETheme.ICON_MOON;
@@ -32,8 +30,12 @@ export class HeaderComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (this.element) {
-      this.element.nativeElement.querySelector('.mdc-switch__icon--on').firstChild.setAttribute('d', ETheme.TOGGLE_SUN);
-      this.element.nativeElement.querySelector('.mdc-switch__icon--off').firstChild.setAttribute('d', ETheme.TOGGLE_MOON);
+      this.element.nativeElement
+        .querySelector('.mdc-switch__icon--on')
+        .firstChild.setAttribute('d', ETheme.TOGGLE_SUN);
+      this.element.nativeElement
+        .querySelector('.mdc-switch__icon--off')
+        .firstChild.setAttribute('d', ETheme.TOGGLE_MOON);
     }
   }
 }

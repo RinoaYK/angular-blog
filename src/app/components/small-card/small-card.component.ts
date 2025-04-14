@@ -6,7 +6,10 @@ import { RouterModule } from '@angular/router';
   selector: 'app-small-card',
   imports: [RouterModule, CommonModule],
   templateUrl: './small-card.component.html',
-  styleUrl: './small-card.component.scss',
+  styleUrls: [
+    './small-card.component.scss',
+    './small-card.component_media.scss',
+  ],
 })
 export class SmallCardComponent {
   @Input()
@@ -19,5 +22,4 @@ export class SmallCardComponent {
   alt: string = '';
   @Input()
   id: string = '';
-
 }

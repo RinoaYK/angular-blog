@@ -5,17 +5,17 @@ import { RouterModule } from '@angular/router';
   selector: 'app-big-card',
   imports: [RouterModule],
   templateUrl: './big-card.component.html',
-  styleUrl: './big-card.component.scss'
+  styleUrls: ['./big-card.component.scss', './big-card.component_media.scss'],
 })
 export class BigCardComponent {
-	@Input()
-	title: string = "";
-	@Input()
-	cover: string = "";
-	@Input()
-	alt: string = "";
-	@Input()
-	description: string = "";
-	@Input()
-	id: string = "";
+  @Input()
+  title: string = '';
+  @Input()
+  cover: string = '';
+  @Input()
+  alt: string = '';
+  @Input()
+  description: string = '';
+  @Input()
+  id: string = '';
 }
